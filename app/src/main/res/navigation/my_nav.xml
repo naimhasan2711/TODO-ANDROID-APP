@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.nakibul.todo.ui.fragment.HomeFragment"
+        android:label="@string/todo_list"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/homeFrg_to_addFrag"
+            app:destination="@id/addFragment" />
+        <action
+            android:id="@+id/homeFrag_to_updateFrag"
+            app:destination="@id/updateFragment" />
+        <action
+            android:id="@+id/homeFrag_to_settingFrag"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="com.nakibul.todo.ui.fragment.AddFragment"
+        android:label="@string/add_todo"
+        tools:layout="@layout/fragment_add">
+        <action
+            android:id="@+id/addFrag_to_homeFrag"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/addFrag_to_settingFrag"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateFragment"
+        android:name="com.nakibul.todo.ui.fragment.UpdateFragment"
+        android:label="@string/update_todo"
+        tools:layout="@layout/fragment_update">
+        <action
+            android:id="@+id/updateFrag_to_homeFrag"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/updateFrag_to_settingFrag"
+            app:destination="@id/settingsFragment" />
+        <argument
+            android:name="todoItem"
+            app:argType="com.nakibul.todo.data.local.Todo" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.nakibul.todo.ui.fragment.SettingsFragment"
+        android:label="@string/ss"
+        tools:layout="@layout/fragment_settings">
+        <action
+            android:id="@+id/settingFrag_to_updateFrag"
+            app:destination="@id/updateFragment" />
+        <action
+            android:id="@+id/settingFrag_to_addFrag"
+            app:destination="@id/addFragment" />
+        <action
+            android:id="@+id/settingFrag_to_homeFrag"
+            app:destination="@id/homeFragment" />
+    </fragment>
+</navigation>

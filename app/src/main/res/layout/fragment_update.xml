@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.fragment.UpdateFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--textview logo-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bungee"
+                android:paddingStart="@dimen/dimen_16"
+                android:paddingTop="@dimen/dimen_16"
+                android:paddingEnd="@dimen/dimen_16"
+                android:text="@string/update_data"
+                android:textColor="@color/dark_gray"
+                android:textSize="@dimen/text_32sp"
+                android:transitionName="logo_text" />
+
+            <!--Edittext title -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textview_title_container"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_8"
+                android:hint="@string/task_title"
+                app:helperText="@string/required"
+                app:helperTextTextColor="@android:color/holo_red_light">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textView_edit_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:transitionName="input_trans" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--Edittext description-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textview_description_container"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_8"
+                android:hint="@string/task_description"
+                app:helperText="@string/required"
+                app:helperTextTextColor="@android:color/holo_red_light">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textView_edit_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:transitionName="input_trans" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--Textview time-->
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textView_edit_time"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_55"
+                android:layout_margin="@dimen/dimen_8"
+                android:background="@drawable/textview_custom"
+                android:drawableStart="@drawable/ic_baseline_calendar_month_24"
+                android:fontFamily="@font/doppio_one"
+                android:gravity="center"
+                android:paddingStart="@dimen/dimen_10"
+                android:paddingEnd="@dimen/dimen_10"
+                android:text="@string/_12_00pm"
+                android:textAlignment="center"
+                android:textColor="@color/dark_gray"
+                android:textSize="@dimen/text_24sp"
+                android:textStyle="bold" />
+
+            <!--Button update-->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_update"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_8"
+                android:background="@drawable/button_custom"
+                android:fontFamily="@font/poppins_semibold"
+                android:gravity="center"
+                android:padding="@dimen/dimen_2"
+                android:text="@string/update"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_18sp"
+                app:cornerRadius="@dimen/dimen_10" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </ScrollView>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
